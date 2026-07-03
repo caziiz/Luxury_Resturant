@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious Bites - Premium luxury restaurant featuring fresh ingredients and professional chefs.">
+    <meta name="theme-color" content="#8B0000">
+    <title>Delicious Bites - Premium Luxury Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <span class="logo-text">Delicious Bites</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-link="home">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-link="about">About</a></li>
+                <li class="nav-item"><a href="#menu" class="nav-link" data-link="menu">Menu</a></li>
+                <li class="nav-item"><a href="#offers" class="nav-link" data-link="offers">Offers</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link" data-link="gallery">Gallery</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link" data-link="testimonials">Testimonials</a></li>
+                <li class="nav-item"><a href="#reservation" class="nav-link" data-link="reservation">Reservation</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-link="contact">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Delicious Bites</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Fresh Food, Great Taste, Memorable Moments.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' })">Book a Table</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })">View Menu</button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- About Image -->
+                <div class="about-image animate-on-scroll">
+                    <img src="images/restaurant-interior.jpg" alt="Restaurant Interior" class="fade-image">
+                </div>
+
+                <!-- About Text -->
+                <div class="about-text animate-on-scroll">
+                    <h2 class="section-title">About Delicious Bites</h2>
+                    <p class="about-history">
+                        Welcome to Delicious Bites, where culinary excellence meets luxury dining. Since our founding, we've been committed to providing an unforgettable dining experience with the finest ingredients and professional chefs.
+                    </p>
+
+                    <!-- Mission, Vision, Values -->
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <h3>🌿 Fresh Ingredients</h3>
+                            <p>Sourced daily from local suppliers</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>👨‍🍳 Professional Chefs</h3>
+                            <p>Award-winning culinary experts</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>✨ Luxury Dining</h3>
+                            <p>Premium ambiance and service</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>⚡ Fast Service</h3>
+                            <p>Efficient and courteous staff</p>
+                        </div>
+                    </div>
+
+                    <!-- Animated Counters -->
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="15000">0</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Professional Chefs</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Awards Won</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Our Menu</h2>
+            <p class="section-subtitle text-center animate-on-scroll">Explore our exquisite culinary creations</p>
+
+            <!-- Menu Filters -->
+            <div class="menu-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                <button class="filter-btn" data-filter="lunch">Lunch</button>
+                <button class="filter-btn" data-filter="dinner">Dinner</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Special Offers</h2>
+
+            <div class="offers-grid">
+                <!-- Offer 1 -->
+                <div class="offer-card animate-on-scroll">
+                    <div class="offer-badge">20% OFF</div>
+                    <h3>Pizza Fridays</h3>
+                    <p>Enjoy 20% discount on all pizzas every Friday</p>
+                    <div class="countdown" data-date="2026-07-10">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days1">0</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours1">0</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes1">0</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary small">Claim Now</button>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer-card animate-on-scroll">
+                    <div class="offer-badge">FAMILY</div>
+                    <h3>Family Combo</h3>
+                    <p>Get 4 meals + drinks at special family price</p>
+                    <div class="countdown" data-date="2026-07-15">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days2">0</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours2">0</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes2">0</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary small">Claim Now</button>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer-card animate-on-scroll">
+                    <div class="offer-badge">WEEKEND</div>
+                    <h3>Weekend Buffet</h3>
+                    <p>Unlimited buffet with premium selections on weekends</p>
+                    <div class="countdown" data-date="2026-07-12">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days3">0</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours3">0</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes3">0</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary small">Claim Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Our Gallery</h2>
+            <p class="section-subtitle text-center animate-on-scroll">Experience the beauty of our restaurant</p>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be inserted by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-prev" onclick="previousImage()">&#10094;</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Gallery Image">
+            <button class="lightbox-next" onclick="nextImage()">&#10095;</button>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </section>
+
+    <!-- Chefs Section -->
+    <section class="chefs" id="chefs">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Our Professional Chefs</h2>
+            <p class="section-subtitle text-center animate-on-scroll">Meet our culinary masters</p>
+
+            <div class="chefs-grid">
+                <!-- Chef 1 -->
+                <div class="chef-card animate-on-scroll">
+                    <div class="chef-image">
+                        <img src="images/chef-avatar.jpg" alt="Executive Chef" class="fade-image">
+                    </div>
+                    <h3>Marco Rossi</h3>
+                    <p class="chef-position">Executive Chef</p>
+                    <p class="chef-experience">20+ years in fine dining</p>
+                    <div class="chef-socials">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+
+                <!-- Chef 2 -->
+                <div class="chef-card animate-on-scroll">
+                    <div class="chef-image">
+                        <img src="images/Cheff2.jpg" alt="Pastry Chef" class="fade-image">
+                    </div>
+                    <h3>Sophie Laurent</h3>
+                    <p class="chef-position">Pastry Chef</p>
+                    <p class="chef-experience">15+ years in pastry arts</p>
+                    <div class="chef-socials">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+
+                <!-- Chef 3 -->
+                <div class="chef-card animate-on-scroll">
+                    <div class="chef-image">
+                        <img src="images/Cheff3.jpg" alt="Sous Chef" class="fade-image">
+                    </div>
+                    <h3>David Chen</h3>
+                    <p class="chef-position">Sous Chef</p>
+                    <p class="chef-experience">12+ years in cuisine</p>
+                    <div class="chef-socials">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+
+                <!-- Chef 4 -->
+                <div class="chef-card animate-on-scroll">
+                    <div class="chef-image">
+                        <img src="images/Cheff4.jpg" alt="Cuisine Chef" class="fade-image">
+                    </div>
+                    <h3>Isabella Garcia</h3>
+                    <p class="chef-position">Cuisine Chef</p>
+                    <p class="chef-experience">10+ years in cooking</p>
+                    <div class="chef-socials">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Customer Testimonials</h2>
+            <p class="section-subtitle text-center animate-on-scroll">What our guests say about us</p>
+
+            <div class="testimonials-wrapper">
+                <div class="testimonials-container" id="testimonialsContainer">
+                    <!-- Testimonials will be inserted by JavaScript -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="testimonials-nav">
+                    <button class="testimonial-btn prev" onclick="previousTestimonial()" aria-label="Previous testimonial">❮</button>
+                    <button class="testimonial-btn next" onclick="nextTestimonial()" aria-label="Next testimonial">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Why Choose Delicious Bites</h2>
+
+            <div class="why-choose-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🌿</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Sourced daily from local organic suppliers</p>
+                </div>
+
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">👨‍🍳</div>
+                    <h3>Experienced Chefs</h3>
+                    <p>Award-winning chefs with decades of experience</p>
+                </div>
+
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">⭐</div>
+                    <h3>Premium Service</h3>
+                    <p>Exceptional hospitality and attention to detail</p>
+                </div>
+
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">📱</div>
+                    <h3>Online Reservation</h3>
+                    <p>Easy and convenient booking system</p>
+                </div>
+
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">💰</div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium quality at reasonable prices</p>
+                </div>
+
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery service available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics" id="statistics">
+        <div class="container">
+            <h2 class="section-title text-center text-white animate-on-scroll">Our Achievements</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-icon">📅</span>
+                    <span class="stat-counter" data-target="10">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Years Experience</p>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-icon">😊</span>
+                    <span class="stat-counter" data-target="15000">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Happy Customers</p>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-icon">🍽️</span>
+                    <span class="stat-counter" data-target="120">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Menu Items</p>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-icon">👥</span>
+                    <span class="stat-counter" data-target="40">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Professional Staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFAQ(0)">
+                        <span>Do you offer delivery?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer delivery service for orders within a 5km radius. Delivery is free for orders above $50. Orders typically arrive within 30-45 minutes.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFAQ(1)">
+                        <span>Can I reserve online?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can make reservations directly through our website. Simply fill out the reservation form and we'll confirm your booking. You can also call us at +1-800-BITES-123 for reservations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFAQ(2)">
+                        <span>Do you host private events?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we host private events, corporate dinners, and special occasions. Our event team can customize menus and arrangements. Contact us for details and availability.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFAQ(3)">
+                        <span>Do you have vegetarian meals?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we have a dedicated vegetarian menu with delicious plant-based options. We can also accommodate vegan and special dietary requirements. Please inform us when making your reservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2 class="animate-on-scroll">Subscribe to Our Newsletter</h2>
+            <p class="animate-on-scroll">Get exclusive offers, recipes, and restaurant updates</p>
+
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    required 
+                    aria-label="Email address for newsletter"
+                >
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <div class="newsletter-message" id="newsletterMessage"></div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Make a Reservation</h2>
+            <p class="section-subtitle text-center animate-on-scroll">Reserve your table at Delicious Bites</p>
+
+            <div class="reservation-content">
+                <!-- Reservation Form -->
+                <form class="reservation-form" id="reservationForm" onsubmit="handleReservationSubmit(event)">
+                    <div class="form-group">
+                        <label for="reserveName">Full Name</label>
+                        <input type="text" id="reserveName" required aria-label="Full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reserveEmail">Email</label>
+                        <input type="email" id="reserveEmail" required aria-label="Email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reservePhone">Phone Number</label>
+                        <input type="tel" id="reservePhone" required aria-label="Phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reserveDate">Date</label>
+                        <input type="date" id="reserveDate" required aria-label="Reservation date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reserveTime">Time</label>
+                        <input type="time" id="reserveTime" required aria-label="Reservation time">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reserveGuests">Number of Guests</label>
+                        <select id="reserveGuests" required aria-label="Number of guests">
+                            <option value="">Select...</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reserveRequest">Special Request</label>
+                        <textarea id="reserveRequest" rows="4" placeholder="Any special requirements?" aria-label="Special request"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Book Table</button>
+                    <div class="form-message" id="reservationMessage"></div>
+                </form>
+
+                <!-- Reservation Info -->
+                <div class="reservation-info animate-on-scroll">
+                    <h3>Restaurant Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">📍 Address:</span>
+                        <span>123 Gourmet Street, Food City, FC 12345</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">📞 Phone:</span>
+                        <span>+1-800-BITES-123</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">📧 Email:</span>
+                        <span>info@deliciousbites.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">🕒 Hours:</span>
+                        <span>Mon-Thu: 11 AM - 10 PM<br>Fri-Sat: 11 AM - 11 PM<br>Sun: 12 PM - 9 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Contact Us</h2>
+
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>123 Gourmet Street<br>Food City, FC 12345</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+18008248123">+1-800-BITES-123</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@deliciousbites.com">info@deliciousbites.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>🕒 Hours</h3>
+                        <p>Mon-Thu: 11 AM - 10 PM<br>Fri-Sat: 11 AM - 11 PM<br>Sun: 12 PM - 9 PM</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required aria-label="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required aria-label="Your email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required aria-label="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required aria-label="Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    <div class="form-message" id="contactMessage"></div>
+                </form>
+
+                <!-- Map Placeholder -->
+                <div class="contact-map animate-on-scroll">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019252571699!2d-122.41941592345045!3d37.77492997125859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4701%3A0xb10ed6d8b5e66e1e!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Restaurant location map"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Logo -->
+                <div class="footer-section animate-on-scroll">
+                    <h3 class="footer-logo">Delicious Bites</h3>
+                    <p>Premium luxury restaurant serving the finest cuisine with exceptional service.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section animate-on-scroll">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="footer-section animate-on-scroll">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Mon-Thu: 11 AM - 10 PM</li>
+                        <li>Fri-Sat: 11 AM - 11 PM</li>
+                        <li>Sunday: 12 PM - 9 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section animate-on-scroll">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 +1-800-BITES-123</li>
+                        <li>📧 info@deliciousbites.com</li>
+                        <li>📍 123 Gourmet Street, Food City</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Delicious Bites. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#" aria-label="Terms of Service">Terms of Service</a>
+                </div>
+            </div>
+
+            <!-- Back to Top Button -->
+            <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
