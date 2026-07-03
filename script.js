@@ -14,7 +14,7 @@ const menuItems = [
         description: 'Classic French toast with berries and syrup',
         price: '$12.99',
         rating: '⭐ 4.8',
-        image: 'images/French-toast.jpg'
+        image: 'images/French-Toast.jpg'
     },
     {
         category: 'breakfast',
